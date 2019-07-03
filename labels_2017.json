@@ -1,0 +1,67 @@
+{
+	"instrument": [{
+			"name": "Background",
+			"color": [0, 0, 0],
+			"classid": 0
+		},
+		{
+			"name": "Bipolar_Forceps",
+			"color": [32, -1, -1],
+			"classid": 1
+		},
+		{
+			"name": "Prograsp_Forceps",
+			"color": [64, -1, -1],
+			"classid": 2
+		},
+		{
+			"name": "Large_Needle_Driver",
+			"color": [96, -1, -1],
+			"classid": 3
+		},
+		{
+			"name": "Vessel_Sealer",
+			"color": [128, -1, -1],
+			"classid": 4
+		},
+		{
+			"name": "Grasping_Retractor",
+			"color": [160, -1, -1],
+			"classid": 5
+		},
+		{
+			"name": "Monopolar_Curved_Scissors",
+			"color": [192, -1, -1],
+			"classid": 6
+		},
+		{
+			"name": "Other",
+			"color": [224, -1, -1],
+			"classid": 7
+		}
+
+	],
+	"parts":
+
+		[{
+				"name": "Shaft",
+				"color": [-1, 85, -1],
+				"classid": 8
+			},
+			{
+				"name": "Wrist",
+				"color": [-1, 170, -1],
+				"classid": 9
+			},
+			{
+				"name": "Claspers",
+				"color": [-1, 255, -1],
+				"classid": 10
+			}
+		],
+	"binary": [{
+		"name": "Binary",
+		"color": [-1, -1, 225],
+		"classid": 11
+	}]
+}

@@ -1,0 +1,30 @@
+{
+  "img_rows":224,
+  "img_cols":224,
+  "network":"MulResNet",
+  "task":"all",
+  "loss":"CE",
+  "lr": 0.0001,
+  "optimizer": "adam",
+  "batch_size": 10,
+  "epoch_size": 1,
+  "CLAHE": false,
+  "nb_epoch": 40,
+  "cycle_start_epoch": 23,
+  "predict_batch_size": 5,
+  "CROP": false,
+  "Flip": false,
+  "perspective": false,
+  "lighting": false,
+  "affine": false,
+  "randcrop": false,
+  "perspective": false,
+  "dbg": false,
+  "save_images": true,
+  "include_top": false,
+  "weights": "imagenet",
+  "data_path":"/media/a252/540/aug/",
+  "data_path_test": "/media/a252/540/data_main/cropped_train/"
+
+}
+
