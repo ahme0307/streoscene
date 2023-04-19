@@ -1,6 +1,10 @@
 import sys, os
 import numpy as np
-from keras.preprocessing.image import transform_matrix_offset_center, apply_transform, Iterator,random_channel_shift, flip_axis
+# from tensorflow.keras.preprocessing.image import ImageDataGenerator
+# from ImageDataGenerator import transform_matrix_offset_center
+from keras.preprocessing.image import ImageDataGenerator
+# from keras.preprocessing.image import apply_transform, Iterator,random_channel_shift, flip_axis
+from keras.preprocessing.image import Iterator,random_channel_shift
 from scipy.ndimage.interpolation import map_coordinates
 from scipy.ndimage.filters import gaussian_filter
 import cv2
@@ -14,6 +18,15 @@ from  params import *
 import json
 import math
 #import matplotlib.pyplot as plt
+
+def transform_matrix_offset_center(matrix, x, y):
+    o_x = float(x) / 2 + 0.5
+    o_y = float(y) / 2 + 0.5
+    offset_matrix = np.array([[1, 0, o_x], [0, 1, o_y], [0, 0, 1]])
+    reset_matrix = np.array([[1, 0, -o_x], [0, 1, -o_y], [0, 0, 1]])
+    transform_matrix = np.dot(np.dot(offset_matrix, matrix), reset_matrix)
+    return transform_matrix
+
 def clip(img, dtype, maxval):
     return np.clip(img, 0, maxval).astype(dtype)
 def RandomLight(img,img_right):
